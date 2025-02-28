@@ -38,8 +38,8 @@ def gen_need_update_list(src_list):
     need_update = lambda src, post \
         : (not is_file(post)) or is_template_changed(post) \
         or (is_file(src) and is_dependency_changed(post, src)) \
-        
-    
+
+
     return [f for f in src_list if need_update(src_path(f), post_path(f))];
 
 def update_post():
@@ -61,7 +61,7 @@ def update_post():
             exit(-1)
 
         write_file(POST_TEMPLATE_PATH, gen_post_template())
-        
+
         # Preprocess sources
         process_files(preprocess, src_path, temp_path, need_update_list)
 
