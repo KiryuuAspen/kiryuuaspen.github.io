@@ -93,3 +93,8 @@ code[class*=language-], pre[class*=language-] {
 .invalid-expression {
     color: var(--pre-bg-color)
 }
+
+.slogan {
+    text-align: center;
+    font-style: italic;
+}
